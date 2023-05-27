@@ -1,3 +1,17 @@
+
+## "ui": "workspace:* in all the package.json means, get the ui package from the workspace(pnpm-workspace). It is actuall the pnpm-workspace that allows sharing packages between the applications and th eother packages in hte monorepo. npm and yarn also have this workspaces idea, but they all have a bit different implementation
+
+#### Renaming the start script to dev, so running pnpm dev at a high level will start the dev scripts on all the apps, as NextJS apps have a dev script and not a start script 
+
+#### ts-config => contains all the TS configurations for all the next apps that were craeted in boilerplate turborepo, but it also worksout well for the react apps too
+
+#### Running pnpm/npm I after everychange made in package.json or tsconfig.json, rebuilds all the dependencies from the newly created react app movies, to get it ready for the monorepo and also make the linkage between the tsconfig and the movies app.
+
+### packages/ui/package.json => "dev": "tsc --watch --outDir dist" & "build": "tsc --outDir dist" => these scripts are added as teh NextJS way of how the webpack is configured does not work with teh CRA's way. The CRA's way does not support building TS from external modules, so these 2 scripts are added to prebuild the TS in the library.                                                 
+
+### After adding the scripts cd => packages/ui => pnpm build => creates index.d.ts, index.js....etc.                                     replace main: "index.js" & types: "index.d.ts" in /ui/package.json = this change => the app is not exporting TS or built version of TS, built typings woukd be available under ```types: "index.d.ts"```. This furthermore makes sure that the apps do noy get to do the compilation of the code that are in the ```/packages```.
+
+
 # Turborepo starter
 
 This is an official starter Turborepo.
