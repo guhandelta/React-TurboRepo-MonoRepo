@@ -21,6 +21,7 @@
     "ui": "workspace:*",
     "store": "workspace:*",
     "card": "workspace:*",
+    "games-content": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

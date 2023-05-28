@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 import { AppShell } from "ui";
-import GamesContent from './GamesContent';
-
+import { GamesContent } from "games-content";
 
 function App() {
   return (

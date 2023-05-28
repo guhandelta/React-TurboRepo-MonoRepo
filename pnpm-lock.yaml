@@ -55,6 +55,9 @@ importers:
       card:
         specifier: workspace:*
         version: link:../../packages/card
+      games-content:
+        specifier: workspace:*
+        version: link:../../packages/games-content
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -112,6 +115,9 @@ importers:
       card:
         specifier: workspace:*
         version: link:../../packages/card
+      games-content:
+        specifier: workspace:*
+        version: link:../../packages/games-content
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -188,6 +194,49 @@ importers:
       eslint-plugin-react:
         specifier: 7.28.0
         version: 7.28.0(eslint@7.32.0)
+
+  packages/games-content:
+    dependencies:
+      '@emotion/react':
+        specifier: ^11.11.0
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
+      '@mantine/core':
+        specifier: ^6.0.11
+        version: 6.0.11(@emotion/react@11.11.0)(@mantine/hooks@6.0.11)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/hooks':
+        specifier: ^6.0.11
+        version: 6.0.11(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.11.2
+        version: 6.11.2(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.7
+        version: 18.2.7
+      '@types/react-dom':
+        specifier: ^18.2.4
+        version: 18.2.4
+      card:
+        specifier: workspace:*
+        version: link:../card
+      eslint:
+        specifier: ^7.32.0
+        version: 7.32.0
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      store:
+        specifier: workspace:*
+        version: link:../store
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^4.5.2
+        version: 4.9.5
 
   packages/store:
     dependencies:
