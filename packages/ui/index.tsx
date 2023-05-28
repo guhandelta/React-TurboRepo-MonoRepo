@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Link, Outlet, Routes, Route } from 'react-rout
 // component exports
 export * from "./Button";
 export * from "./Header";
+import { useStore } from "store"
 
 export type Route = {
     element: FunctionComponent;
@@ -17,6 +18,7 @@ export type NavLink = {
 };
 
 function MainLink({ label, path }: NavLink) {
+
     return (
         <Link to={path}>
             <UnstyledButton
@@ -47,56 +49,62 @@ export const AppShell: FunctionComponent<{
     colorScheme?:"light" | "dark";
     routes: Route[];
     navLinks: NavLink[];
-}> = ({ title, colorScheme, routes, navLinks }) =>(
-    <Router>
-        <MantineProvider
-            withGlobalStyles
-            withNormalizeCSS
-            theme={{
-                colorScheme
-            }}
-        >
-            <MantineAppShell
-                padding="md"
-                navbar={
-                    <Navbar width={{ base:300 }} height={300} p="xs">
-                        {navLinks.map(link => (
-                            <MainLink {...link} key={link.path} />
-                        ))}
-                    </Navbar>
-                }
-                header={
-                    <Header
-                        height={60}
-                        p="xs"
-                        sx={{
-                            display: "flex",
-                        }}
-                        styles={theme => ({
-                            main:{
-                                backgroundColor:
-                                    theme.colorScheme === "dark"
-                                        ? theme.colors.dark[8]
-                                        : theme.colors.gray[0]
-                            }
-                        })}
-                    >
-                        <Title>{title}</Title>
-                    </Header>
-                        
-                }
+}> = ({ title, colorScheme, routes, navLinks }) =>{
+    
+    const { games } = useStore();
+
+    return (
+        <Router>
+            <MantineProvider
+                withGlobalStyles
+                withNormalizeCSS
+                theme={{
+                    colorScheme
+                }}
             >
-                <Routes>
-                    {routes.map((route) => (
-                        <Route 
-                            key={route.path}
-                            path={route.path}
-                            element={<route.element />}
-                        />
-                    ))}
-                </Routes>
-                <Outlet />
-            </MantineAppShell>
-        </MantineProvider>
-    </Router>
-)
+                <MantineAppShell
+                    padding="md"
+                    navbar={
+                        <Navbar width={{ base:300 }} height={300} p="xs">
+                            {navLinks.map(link => (
+                                <MainLink {...link} key={link.path} />
+                            ))}
+                        </Navbar>
+                    }
+                    header={
+                        <Header
+                            height={60}
+                            p="xs"
+                            sx={{
+                                display: "flex",
+                            }}
+                            styles={theme => ({
+                                main:{
+                                    backgroundColor:
+                                        theme.colorScheme === "dark"
+                                            ? theme.colors.dark[8]
+                                            : theme.colors.gray[0]
+                                }
+                            })}
+                        >
+                            <Title sx={{ flexGrow: 1 }}>{title}</Title>
+                            <Text size="xl">{games.length} selected</Text>
+                        </Header>
+                            
+                    }
+                >
+                    <Routes>
+                        {routes.map((route) => (
+                            <Route 
+                                key={route.path}
+                                path={route.path}
+                                element={<route.element />}
+                            />
+                        ))}
+                    </Routes>
+                    <Outlet />
+                </MantineAppShell>
+            </MantineProvider>
+        </Router>
+    )
+}

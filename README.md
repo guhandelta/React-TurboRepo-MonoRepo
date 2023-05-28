@@ -3,6 +3,8 @@
 
 # Install any required library inside the `packages/ui` the apps or the components don't know that they will be using all these packages or libraries, but only the `AppShell` knows about it and it will take care of everything
 
+### Added `"store": "workspace:*"` into `packages/ui/package.json` so it can be accessed by the other apps
+
 #### Renaming the start script to dev, so running pnpm dev at a high level will start the dev scripts on all the apps, as NextJS apps have a dev script and not a start script 
 
 #### ts-config => contains all the TS configurations for all the next apps that were craeted in boilerplate turborepo, but it also worksout well for the react apps too
