@@ -77,6 +77,66 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4
 
+  apps/playlist:
+    dependencies:
+      '@emotion/react':
+        specifier: ^11.11.0
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
+      '@mantine/core':
+        specifier: ^6.0.11
+        version: 6.0.11(@emotion/react@11.11.0)(@mantine/hooks@6.0.11)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/hooks':
+        specifier: ^6.0.11
+        version: 6.0.11(react@18.2.0)
+      '@testing-library/jest-dom':
+        specifier: ^5.16.5
+        version: 5.16.5
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/user-event':
+        specifier: ^13.5.0
+        version: 13.5.0(@testing-library/dom@9.3.0)
+      '@types/jest':
+        specifier: ^27.5.2
+        version: 27.5.2
+      '@types/node':
+        specifier: ^16.18.34
+        version: 16.18.34
+      '@types/react':
+        specifier: ^18.2.7
+        version: 18.2.7
+      '@types/react-dom':
+        specifier: ^18.2.4
+        version: 18.2.4
+      card:
+        specifier: workspace:*
+        version: link:../../packages/card
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-scripts:
+        specifier: 5.0.1
+        version: 5.0.1(@babel/plugin-syntax-flow@7.21.4)(@babel/plugin-transform-react-jsx@7.22.3)(eslint@8.41.0)(react@18.2.0)(typescript@4.9.5)
+      store:
+        specifier: workspace:*
+        version: link:../../packages/store
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
+      web-vitals:
+        specifier: ^2.1.4
+        version: 2.1.4
+
   packages/card:
     dependencies:
       '@emotion/react':

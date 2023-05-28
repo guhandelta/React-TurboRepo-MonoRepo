@@ -1,24 +1,21 @@
 import React from 'react';
 import { AppShell } from "ui";
-import GamesContent from './GamesContent';
+import { Playlist } from './PlaylistContent';
 
 
 function App() {
   return (
     <AppShell 
-      title="Games" 
+      title="Playlist" 
       colorScheme="dark"
       routes={[
         {
-          element: GamesContent,
-          path: "/"
+          path: "/",
+          element: () => <div>Games Route, coming soon...</div>
         },
         {
-          element: () => <div style={{ textAlign: "center" }}>
-                              <br/><br/><br/><br/><br/>
-                              <b>Checkout the Playlist!!!</b>
-                          </div>,
-          path: "/playlist"
+          path: "/playlist",
+          element: Playlist
         },
       ]}
       navLinks={[
