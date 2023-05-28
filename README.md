@@ -9,7 +9,7 @@
 
 #### ts-config => contains all the TS configurations for all the next apps that were craeted in boilerplate turborepo, but it also worksout well for the react apps too
 
-#### Running `pnpm/npm install` after everychange made in package.json or tsconfig.json, rebuilds all the dependencies from the newly created react app movies, to get it ready for the monorepo and also make the linkage between the tsconfig and the movies app.
+#### Running `pnpm/npm install` after everychange made in package.json or tsconfig.json, rebuilds all the dependencies from the newly created react app games, to get it ready for the monorepo and also make the linkage between the tsconfig and the games app.
 
 ### `packages/ui/package.json` => `"dev": "tsc --watch --outDir dist" & "build": "tsc --outDir dist"` => these scripts are added as teh NextJS way of how the webpack is configured does not work with teh CRA's way. The CRA's way does not support building TS from external modules, so these 2 scripts are added to prebuild the TS in the library.                                                 
 

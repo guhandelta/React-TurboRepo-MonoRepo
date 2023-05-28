@@ -1,17 +1,16 @@
 import React from 'react';
 import { AppShell } from "ui";
+import GamesContent from './GamesContent';
+
 
 function App() {
   return (
     <AppShell 
-      title="Movies" 
+      title="Games" 
       colorScheme="light"
       routes={[
         {
-          element: () => <div style={{ textAlign: "center" }}>
-                              <br/><br/><br/><br/><br/>
-                              <b>Really this is the Homepage!!!</b>
-                          </div>,
+          element: GamesContent,
           path: "/"
         },
         {

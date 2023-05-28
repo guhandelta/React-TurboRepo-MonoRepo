@@ -1,5 +1,5 @@
 {
-  "name": "movies",
+  "name": "games",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "ui": "workspace:*",
+    "card": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

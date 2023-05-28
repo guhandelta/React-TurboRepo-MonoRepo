@@ -7,7 +7,7 @@ export type Game = {
 
 export const useStore = create<{
     games: Game[];
-    // Since this fn() just adds a movie to the list of movies, it does not return anything
+    // Since this fn() just adds a game to the list of games, it does not return anything
     addGame: (game: Game) => void;
 }>(set => ({ 
     games: [],
