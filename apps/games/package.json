@@ -13,14 +13,15 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "card": "workspace:*",
+    "games-content": "workspace:*",
+    "playlist-content": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "ui": "workspace:*",
-    "card": "workspace:*",
-    "games-content": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0"
   }
 }

@@ -3,7 +3,7 @@
 # dependencies
 node_modules
 packages/ui/node_modules
-apps/movies/node_modules
+apps/games/node_modules
 .pnp
 .pnp.js
 dist

@@ -1,6 +1,8 @@
 import React from "react";
+
 import { AppShell } from "ui";
 import { GamesContent } from "games-content";
+import { Playlist } from "playlist-content";
 
 function App() {
   return (
@@ -13,10 +15,7 @@ function App() {
           path: "/"
         },
         {
-          element: () => <div style={{ textAlign: "center" }}>
-                              <br/><br/><br/><br/><br/>
-                              <b>Checkout the Playlist!!!</b>
-                          </div>,
+          element: Playlist,
           path: "/playlist"
         },
       ]}

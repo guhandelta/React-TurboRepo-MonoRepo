@@ -15,6 +15,9 @@
 
 ### After adding the scripts cd => packages/ui => pnpm build => creates index.d.ts, index.js....etc.                                     replace main: "index.js" & types: "index.d.ts" in /ui/package.json = this change => the app is not exporting TS or built version of TS, built typings woukd be available under `types: "index.d.ts"`. This furthermore makes sure that the apps do noy get to do the compilation of the code that are in the `/packages`.
 
+## ModuleFederationPlugin Config : React is shared singleton as the hooks are shared globally, not having `singleton: true` kinda messesup the hooks
+
+## Webpack looks at the `package.json` of the corrseponding MFE and shares the dependenciens. Webpack throws error on libraries/packages imported from workspace like `card: "workspace:*"` as it has no clue about the workspace created by npm/yarn/pnpm. That is why the `card` is shared under `shared instead of exposes` as `card: { singleton: true }`, meaning that this MFE has and is sharing only one instance of card.
 
 # Turborepo starter
 

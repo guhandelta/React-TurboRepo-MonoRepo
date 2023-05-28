@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { AppShell } from "ui";
-import { GamesContent } from "games-content";
+//@ts-ignore
 
-import { Playlist } from './PlaylistContent';
+import { Playlist } from 'playlist-content';
+import { GamesContent } from 'games-content';
 
 
 function App() {

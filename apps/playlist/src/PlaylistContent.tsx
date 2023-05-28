@@ -1,27 +1,14 @@
-import { Box, Title, Grid } from "@mantine/core";
+/*Exposing anything directly from a library may bring in any security vulnerabilities like
 
-import { useStore } from 'store'
-import { GameCard } from 'card'
+Source code vulnerabilities.
+Input validation.
+Reliance on client-side validation.
+Unintended script execution.
+Session data exposure.
+Unintentional user activity
 
-export const Playlist = () => {
+So it is exposed indirectly, from a separate file */
+import React from 'react'
+import { Playlist } from 'playlist-content'
+export default Playlist
 
-  const { games } = useStore();
-
-  return (
-    <>
-      <Box>
-        <Title>Viewing List</Title>
-      </Box>
-      <Grid
-        mt={20}
-        sx={{
-          gap: "1rem"
-        }}
-      >
-        {games.map(game =>(
-          <GameCard {...game} key={game.title} />
-        ))}
-      </Grid>
-    </>
-  )
-}
