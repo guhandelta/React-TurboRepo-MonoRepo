@@ -1,4 +1,4 @@
-import { Grid } from "@mantine/core";
+import { Grid, Title } from "@mantine/core";
 import { GameCard } from "card"
 
 const games = [
@@ -46,15 +46,18 @@ const games = [
 
 const GamesContent = () => {
   return (
-    <Grid
-      sx={{
-        gap: "1rem"
-      }}
-    >
-      {games.map(game => (
-        <GameCard {...game} key={game.title} showAddButton />
-      ))}
-    </Grid>
+    <>
+      <Title>Top PS5 games</Title><br /><br /><br />
+      <Grid
+        sx={{
+          gap: "1rem"
+        }}
+      >
+        {games.map(game => (
+          <GameCard {...game} key={game.title} showAddButton />
+        ))}
+      </Grid>
+    </>
   )
 } 
 

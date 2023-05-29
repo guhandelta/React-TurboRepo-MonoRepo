@@ -263,6 +263,9 @@ importers:
       '@mantine/hooks':
         specifier: ^6.0.11
         version: 6.0.11(react@18.2.0)
+      card:
+        specifier: workspace:*
+        version: link:../card
       react-router-dom:
         specifier: ^6.11.2
         version: 6.11.2(react-dom@18.2.0)(react@18.2.0)
